@@ -1,0 +1,1 @@
+$(function(){$('#wrapper').after('<div id="bottom-nav"><div class="wrap">Provided by KEVINLEARY.net &mdash; <a href="http://www.kevinleary.net">HOME</a> | <a href="http://www.kevinleary.net/blog/">BLOG</a></div></div>');if(window.console&&window.console.log){console.log('wp-samples.js succcesfully loaded.');}});

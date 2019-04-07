@@ -1,12 +1,168 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Research</title>
-</head>
-<body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
 
-</body>
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+    <title>Mukund Gupta</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="wp-samples.js"></script>
+    <script type="text/javascript" src="jquery.url.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        $page = jQuery.url.attr("file");
+        if(!$page) {
+          $page = 'index.html';
+        }
+        $('ul.navigation li a').each(function(){
+          var $href = $(this).attr('href');
+          if ( ($href == $page) || ($href == '') ) {
+            $(this).addClass('on');
+          } else {
+            $(this).removeClass('on');
+          }
+        });
+      });
+    </script>
+
+  </head>
+
+
+  <body style="background-color:#e6eff7;">
+    <div id="contain">
+
+      <div id="header">
+        <h1>Mukund Gupta</h1>
+      </div>
+
+      <horiz_line></horiz_line>
+
+      <div id="navbar">
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </div>
+
+      <horiz_line></horiz_line>
+
+      <br>
+
+
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="sea_ice.png" height="90%" width="90%"  class='center'>
+          <div class="text">Arctic sea ice</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="pano.png" height="90%" width="90%"  class='center'>
+          <div class="text">Sun Dog</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="ice_lake.png" height="90%" width="90%"  class='center'>
+          <div class="text">Melt pond</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      </div>
+
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <br>
+
+      <div class="clearfix">
+      <img class="img2" src="volc_response.png" width="30%">
+      <h2 class="res_h2">Climate sensitivity</h2>
+        <p class="res_txt"> The climate sensitivity represents the degree
+        to which the Earth's temperature is affected by changes in its
+        radiative budget. Both atmopsheric feedbacks and ocean heat uptake
+        play a role in the equilibration process following a radiative perturbation.
+        We have made use of the the Earth's temperature response to volcanic eruptions
+        in an attempt to seperate those two contributions.
+        <p class="res_txt"> Relevant publication:  <a href="https://doi.org/10.1175/JCLI-D-17-0703.1">Gupta & Marshall (2018)</a> </p>
+      </div>
+
+      <br>
+
+      <div class="clearfix">
+      <img class="img2" src="mult_eq.png" width="33%">
+      <h2 class="res_h2">Multiple climate equilibria</h2>
+        <p class="res_txt"> The climate of the Earth has undergone significant shifts throughout Earth's history,
+          ranging from hothouse worlds to possibly a complete <a href="http://www.snowballearth.org/">Snowball </a>.
+          This observation may suggest that the climate can be viewed as a dynamical system
+          with multiple stable states. We have investigated the possibilty for a sequence of large volcanic events
+          to initiate a bifurcation on to a different stable state.
+      </div>
+
+
+
+
+
+
+      <br>
+
+      <horiz_line></horiz_line>
+
+      <div id="content_contact">
+        <p>guptam at mit dot edu</p>
+        <p>77 Massachusetts Ave., Cambridge, MA</p>
+        <p>Office number 54-1519</p>
+      </div>
+
+
+
+      <horiz_line></horiz_line>
+
+
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+      </script>
+
+
+  </body>
 </html>

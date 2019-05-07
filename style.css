@@ -66,6 +66,11 @@ p {
 	padding: 10px 10px;
 }
 
+#picture_colum p {
+	font:10pt verdana, arial, sans-serif;
+	padding: 5px 5px;
+}
+
 #picture_res {
 	width:300px;
 	float:right;
@@ -144,7 +149,7 @@ p {
 
 #content_contact p {
 	font:9pt verdana, arial, sans-serif;
-	line-height: 20pt;
+	line-height: 15pt;
 	text-align: center;
 }
 

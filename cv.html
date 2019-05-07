@@ -1,59 +1,194 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
+
   <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
     <title>Mukund Gupta</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-  <!--
-  .style8 {color: #2B4F77}
-  -->
-    </style>
+
+    <script type="text/javascript" src="jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="wp-samples.js"></script>
+    <script type="text/javascript" src="jquery.url.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        $page = jQuery.url.attr("file");
+        if(!$page) {
+          $page = 'index.html';
+        }
+        $('ul.navigation li a').each(function(){
+          var $href = $(this).attr('href');
+          if ( ($href == $page) || ($href == '') ) {
+            $(this).addClass('on');
+          } else {
+            $(this).removeClass('on');
+          }
+        });
+      });
+    </script>
+
   </head>
 
 
-  <body>
-
-
+  <body style="background-color:#e6eff7;">
     <div id="contain">
 
       <div id="header">
         <h1>Mukund Gupta</h1>
       </div>
 
+      <horiz_line></horiz_line>
+
       <div id="navbar">
-      <ul id="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="code.html">Code</a></li>
-        <li><a href="cv.html">CV</a></li>
-      </ul>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </div>
+
+      <horiz_line></horiz_line>
+
+      <br>
+
+
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="sea_ice.png" height="90%" width="90%"  class='center'>
+          <div class="text">Arctic sea ice</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="ice_lake.png" height="90%" width="90%"  class='center'>
+          <div class="text">Melt pond</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="pano.png" height="90%" width="90%"  class='center'>
+          <div class="text">Sun Dog</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <div id="content_publ">
+
+        <br>
+
+        <h2 class="style5">2015 - Present: Ph.D. in Climate Science at MIT</h2>
+
+        <br>
+
+        <p> <b> Advisor: </b> Prof. John Marshall. <b> GPA: </b> 5/5. <b> Selected courses: </b> </p>
+
+        <li>Large scale ocean dynamics (with Prof. Raffaele Ferrari)</li>
+
+        <li>Small scale ocean dynamics (with Dr. Karl Helfrich)</li>
+
+        <li>Atmospheric radiation and convection (with Prof. Tim Cronin)</li>
+
+        <li>Dynamics of the atmosphere (with Prof. Paul O'Gorman)</li>
+
+        <li>Climate dynamics (with Prof. Eli Tziperman at Harvard)</li>
+
+        <li>The global carbon cycle (with Prof. Mick Follows)</li>
+
+        <br>
+
+        <p> <b> Presentations: </b> </p>
+
+        <li>IUGG conference in Montreal, Canada (upcoming)</li>
+        <li>Harvard Crimson Workshop in Cambridge, MA (2019)</li>
+        <li>Swiss Climate Summer School in Grindelwald, Switzerland (2018)</li>
+        <li>Volcanic Impacts on Climate and Society (VICS) workshop in Tucson, Arizona (2018)</li>
+        <li>Graduate Climate Conference in Woods Hole, MA (2017)</li>
+        <li>Modeling Hierarchies Workshop in Princeton, New Jersey (2016)</li>
+
+        <br>
+
+        <p> <b> Awards: </b> </p>
+        <li>Charney fellowship award (2015-2018)</li>
+        <li>ThinkSwiss research scholarship award (2018)</li>
+        <br>
+
+        <p> <b> Teaching: </b> </p>
+
+        <li>Spring 2019: Teaching assistant for <a href="http://weatherclimatelab.mit.edu/">Weather and Climate Laboratory</a> (undergraduate course)</li>
+        <li>Spring 2017: Teaching assistant for Climate Science (graduate course)</li>
+        <li>Summer 2016: Lecture on atmospheric science (K-12)</li>
+
+
+        <br>
+        <h2 class="style5">2013 - 2015: Mechanical engineering consulting at <a href="https://www.atkinsglobal.com/en-gb">WS Atkins</a></h2>
+        <br>
+
+        <li>Gas dispersion studies using computational fluid dynamics</li>
+
+        <br>
+        <h2 class="style5">2009 - 2013: M.Eng. in Mechanical Engineering at University of Cambridge </h2>
+        <br>
+
+        <li><b> Thesis:</b> Investigation of the turbulent flame speed in spray fuels</li>
+
       </div>
 
 
-      <div id="content">
-        <h2 class="style5">Submitted</h2>
-        <p>Multiple equilibria </p>
 
-        <h2 class="style5">2018</h2>
-        <li>The sensitivity of the climate to radiative perturbations</li>
 
-        <h2 class="style5">2017</h2>
-        <li>Ozone</li>
 
-      </div>
+      <horiz_line></horiz_line>
 
-      <div id="footer">
+      <div id="content_contact">
         <p>guptam at mit dot edu</p>
-        <p>MIT 54-1519</p>
+        <p>77 Massachusetts Ave., Cambridge, MA</p>
+        <p>Office number 54-1519</p>
       </div>
 
+      <horiz_line></horiz_line>
 
-    </div>
+
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+      </script>
 
 
   </body>

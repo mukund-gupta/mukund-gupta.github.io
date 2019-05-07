@@ -99,8 +99,6 @@ p {
 }
 
 
-
-
 #content_publ {
 	margin-left:50px;
 	width:900px;
@@ -122,6 +120,7 @@ p {
 #content {
 	margin-left:50px;
 	width:600px;
+
 }
 
 #content p {
@@ -134,6 +133,7 @@ p {
 #content li {
 	font:12pt verdana, arial, sans-serif;
 	padding: 10px 10px;
+	line-height: 26px;
 }
 
 #content_contact {

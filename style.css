@@ -310,3 +310,8 @@ horiz_line {
   border-style: inset;
   border-width: 1px;
 }
+
+div, iframe {
+    margin: 0 auto;
+		display:block;
+}
